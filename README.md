@@ -8,11 +8,11 @@ A deployed, end-to-end prototype of a state-level skilling programme attendance 
 
 | Layer | URL |
 |---|---|
-| **Frontend** | `[INSERT VERCEL URL AFTER DEPLOYMENT]` |
-| **Backend API Base** | `[INSERT RAILWAY/RENDER URL AFTER DEPLOYMENT]/api` |
+| **Frontend** | `https://attendance-management-system-gules.vercel.app` |
+| **Backend API Base** | `https://skillbridge-backend-e4to.onrender.com/api` |
 | **Database** | Neon PostgreSQL (connection via `DATABASE_URL` in backend env) |
 
-> **Note:** Both the frontend and backend are running and fully functional in local development (see Section 3). Deployment to Vercel + Railway is the final step.
+> **Note:** Both the frontend and backend are deployed and fully functional. The backend is hosted on Render and the frontend on Vercel.
 
 ---
 
@@ -118,7 +118,7 @@ The schema uses 6 tables. Every key decision was made to keep the data model cle
 | **Backend** | Node.js + Express 5 + TypeScript | Express 5 has native async error propagation. TypeScript + `tsx` for zero-compile-step development. Familiar, well-documented, fast to ship. |
 | **Auth** | Clerk (React SDK + Node SDK) | Handles the entire auth UI (sign-up, sign-in, session management) so I could focus on the role-based business logic. The backend uses `ClerkExpressRequireAuth()` for cryptographic JWT signature verification on every protected route — not just payload decoding. |
 | **Database** | Neon PostgreSQL + `node-postgres` (`pg`) | Serverless PostgreSQL with connection pooling built in. Used raw SQL (no ORM) to demonstrate query authorship and keep the dependency tree small. |
-| **Deployment** | Vercel (frontend) + Railway (backend) | Both have free tiers and deploy from the same repository without config files. |
+| **Deployment** | Vercel (frontend) + Render (backend) | Both have free tiers and deploy from the same repository without config files. |
 
 ---
 
