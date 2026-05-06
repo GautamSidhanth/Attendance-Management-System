@@ -16,8 +16,8 @@ function App() {
         <Route path="/" element={<Landing />} />
         
         {/* Clerk Auth Routes */}
-        <Route path="/sign-in/*" element={<div className="auth-container"><SignIn routing="path" path="/sign-in" fallbackRedirectUrl="/onboarding" /></div>} />
-        <Route path="/sign-up/*" element={<div className="auth-container"><SignUp routing="path" path="/sign-up" fallbackRedirectUrl="/onboarding" /></div>} />
+        <Route path="/sign-in/*" element={<div className="auth-container"><SignIn routing="path" path="/sign-in" forceRedirectUrl="/onboarding" /></div>} />
+        <Route path="/sign-up/*" element={<div className="auth-container"><SignUp routing="path" path="/sign-up" forceRedirectUrl="/onboarding" /></div>} />
 
         {/* Protected Routes */}
         <Route 
