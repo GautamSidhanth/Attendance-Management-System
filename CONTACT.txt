@@ -1,0 +1,6 @@
+Name: Goutam Sidhant
+Email: gautamsidhanth14@gmail.com
+Phone: 7978754854
+GitHub: https://github.com/GautamSidhanth
+
+Most challenging part: Managing the initial Clerk role assignments strictly in the backend database without relying solely on Clerk's metadata structure, ensuring our PostgreSQL tables stay perfectly in sync with the auth provider's session state.
