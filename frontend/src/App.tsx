@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { useAuth, SignIn, SignUp } from '@clerk/react';
+import { useAuth } from '@clerk/react';
 import Landing from './pages/Landing';
 import Onboarding from './pages/Onboarding';
 import Dashboard from './pages/Dashboard';
@@ -14,10 +14,6 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Landing />} />
-        
-        {/* Clerk Auth Routes */}
-        <Route path="/sign-in/*" element={<div className="auth-container"><SignIn routing="path" path="/sign-in" forceRedirectUrl="/onboarding" /></div>} />
-        <Route path="/sign-up/*" element={<div className="auth-container"><SignUp routing="path" path="/sign-up" forceRedirectUrl="/onboarding" /></div>} />
 
         {/* Protected Routes */}
         <Route 
@@ -28,6 +24,9 @@ function App() {
           path="/dashboard/*" 
           element={isSignedIn ? <Dashboard /> : <Navigate to="/sign-in" />} 
         />
+
+        {/* Catch-all */}
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>
   );
