@@ -2,5 +2,8 @@ Name: Goutam Sidhant
 Email: gautamsidhanth14@gmail.com
 Phone: 7978754854
 GitHub: https://github.com/GautamSidhanth
+GitHub Project Link : https://github.com/GautamSidhanth/Attendance-Management-System.git
+Frontend Link : https://attendance-management-system-gules.vercel.app
+Backend Link : https://skillbridge-backend-e4to.onrender.com/api
 
 Most challenging part: Managing the initial Clerk role assignments strictly in the backend database without relying solely on Clerk's metadata structure, ensuring our PostgreSQL tables stay perfectly in sync with the auth provider's session state.
