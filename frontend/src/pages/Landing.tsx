@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useAuth } from '@clerk/react';
+import { useAuth, SignInButton, SignUpButton } from '@clerk/react';
 import { LogIn, UserPlus } from 'lucide-react';
 
 export default function Landing() {
@@ -19,16 +19,16 @@ export default function Landing() {
           </Link>
         ) : (
           <>
-            <Link to="/sign-in">
+            <SignInButton mode="redirect" forceRedirectUrl="/onboarding">
               <button className="btn-primary" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                 <LogIn size={18} /> Sign In
               </button>
-            </Link>
-            <Link to="/sign-up">
+            </SignInButton>
+            <SignUpButton mode="redirect" forceRedirectUrl="/onboarding">
               <button className="btn-primary" style={{ background: 'transparent', border: '1px solid var(--border-color)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                 <UserPlus size={18} /> Register
               </button>
-            </Link>
+            </SignUpButton>
           </>
         )}
       </div>

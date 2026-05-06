@@ -15,10 +15,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Landing />} />
 
-        {/* Clerk Auth Redirects (bypasses domain issues) */}
-        <Route path="/sign-in" element={<RedirectToSignIn />} />
-        <Route path="/sign-up" element={<RedirectToSignUp />} />
-
         {/* Protected Routes */}
         <Route 
           path="/onboarding" 
