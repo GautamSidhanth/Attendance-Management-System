@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { useAuth, RedirectToSignIn } from '@clerk/react';
+import { useAuth, RedirectToSignIn, RedirectToSignUp } from '@clerk/react';
 import Landing from './pages/Landing';
 import Onboarding from './pages/Onboarding';
 import Dashboard from './pages/Dashboard';
@@ -14,6 +14,10 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Landing />} />
+
+        {/* Clerk Auth Redirects (bypasses domain issues) */}
+        <Route path="/sign-in" element={<RedirectToSignIn />} />
+        <Route path="/sign-up" element={<RedirectToSignUp />} />
 
         {/* Protected Routes */}
         <Route 
